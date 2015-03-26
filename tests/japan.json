@@ -1,0 +1,13 @@
+{
+  "input_file": "tests/src/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
+  "output_file": "tests/assets/jp/japan_mill_en.js",
+  "name_field": "name",
+  "code_field": "iso_3166_2",
+  "projection": "mill",
+  "name": "japan",
+  "where": "ISO_3166_2 = 'JP-' and code_hasc!=''",
+  "minimal_area": 4000000,
+  "buffer_distance": -0.5,
+  "input_file_encoding": "utf-8",
+  "longitude0": -100
+}

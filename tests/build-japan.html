@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jVectorMap demo</title>
+  <link rel="stylesheet" media="all" href="../jquery-jvectormap.css"/>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../jquery.jvectormap.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="assets/jp/test.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    $(function(){
+      $('#map1').vectorMap({
+        map: 'japan_jp_mill_en',
+        backgroundColor: '#B2D0FE'
+      });
+      //$('#map2').vectorMap({map: 'japan_en'});
+    })
+  </script>
+</head>
+<body>
+  <div id="map1" class="map"></div>
+  <div id="map2" class="map"></div>
+</body>
+</html>
