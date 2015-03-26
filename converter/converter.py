@@ -15,13 +15,15 @@ import codecs
 import copy
 
 class Map:
-  def __init__(self, name, language):
+  def __init__(self, name, language, **args):
     self.paths = {}
     self.name = name
     self.language = language
     self.width = 0
     self.height = 0
     self.bbox = []
+    self.prefix_code = args.get('prefix_code')
+    self.change_code = args.get('change_codes')
 
   def addPath(self, path, code, name):
     self.paths[code] = {"path": path, "name": name}
@@ -46,7 +48,7 @@ class Converter:
     }
     args.update(config)
 
-    self.map = Map(args['name'], args.get('language'))
+    self.map = Map(args['name'], args.get('language'), prefix_code=args.get('prefix_code'), change_codes=args.get('change_codes'))
 
     if args.get('sources'):
       self.sources = args['sources']
@@ -156,9 +158,16 @@ class Converter:
           name = feature.GetFieldAsString(str(sourceConfig.get('name_field'))).decode(sourceConfig.get('input_file_encoding'))
           code = feature.GetFieldAsString(str(sourceConfig.get('code_field'))).decode(sourceConfig.get('input_file_encoding'))
           if code in codes:
-            code = '_' + str(nextCode)
+            code = self.map.prefix_code + '_' + str(nextCode) if self.map.prefix_code else '_' + str(nextCode)
             nextCode += 1
           codes[code] = name
+          if self.map.change_code:
+            if name in self.map.change_code:
+              data = self.map.change_code[name]
+              code = data["code"]
+              name = data["name"]
+            else:
+              print name
           self.features[code] = {"geometry": shapelyGeometry, "name": name, "code": code}
       else:
         raise Exception, "Wrong geometry type: "+geometryType

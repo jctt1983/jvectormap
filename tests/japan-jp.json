@@ -1,6 +1,6 @@
 {
   "input_file": "tests/src/ne_10m_admin_1_states_provinces/ne_10m_admin_1_states_provinces.shp",
-  "output_file": "tests/assets/jp/japan_mill_en.js",
+  "output_file": "tests/assets/jp/japan_mill_jp.js",
   "name_field": "name",
   "code_field": "iso_3166_2",
   "projection": "mill",
@@ -18,15 +18,16 @@
     "left": 400,
     "top": 700
   }],
+  "language": "jp",
   "change_codes": {
-    "Aichi": {"code": "JP_23", "name": "Aichi"},
+    "Aichi": {"code": "JP_23", "name": "愛知"},
     "Akita": {"code": "JP_05", "name": "Akita"},
     "Aomori": {"code": "JP_02", "name": "Aomori"},
     "Ehime": {"code": "JP_38", "name": "Ehime"},
     "Gifu": {"code": "JP_21", "name": "Gifu"},
     "Gunma": {"code": "JP_10", "name": "Gunma"},
     "Hiroshima": {"code": "JP_34", "name": "Hiroshima"},
-    "Hokkaido": {"code": "JP_01", "name": "Hokkaido"},
+    "Hokkaido": {"code": "JP_01", "name": "北海道"},
     "Fukui": {"code": "JP_18", "name": "Fukui"},
     "Fukuoka": {"code": "JP_40", "name": "Fukuoka"},
     "Fukushima": {"code": "JP_07", "name": "Fukushima"},
