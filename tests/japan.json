@@ -11,13 +11,16 @@
   "input_file_encoding": "utf-8",
   "language": "en",
   "prefix_code": "JP",
-  "width": 900,
+  "width": 1200,
   "insets": [{
     "codes": ["JP_47"],
-    "width": 800,
-    "left": 400,
-    "top": 700
+    "width": 700,
+    "left": 0,
+    "top": 100
   }],
+  "offset_height": 400,
+  "longitude0": -200,
+  "language": "jp",
   "change_codes": {
     "Aichi": {"code": "JP_23", "name": "Aichi"},
     "Akita": {"code": "JP_05", "name": "Akita"},

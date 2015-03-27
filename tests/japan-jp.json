@@ -14,11 +14,11 @@
   "width": 1200,
   "insets": [{
     "codes": ["JP_47"],
-    "width": 800,
-    "left": 488,
-    "top": 900
+    "width": 700,
+    "left": 0,
+    "top": 100
   }],
-  "offset_height": 300,
+  "offset_height": 400,
   "longitude0": -200,
   "language": "jp",
   "change_codes": {
