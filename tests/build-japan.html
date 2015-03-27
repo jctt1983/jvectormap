@@ -5,29 +5,29 @@
   <link rel="stylesheet" media="all" href="../jquery-jvectormap.css"/>
   <script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="../jquery.jvectormap.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="assets/jp/japan_mill_en.js?1" type="text/javascript" charset="utf-8"></script>
-  <script src="assets/jp/japan_mill_jp.js?1" type="text/javascript" charset="utf-8"></script>
+  <script src="assets/jp/japan_mill_en.js?2" type="text/javascript" charset="utf-8"></script>
+  <script src="assets/jp/japan_mill_ja.js?2" type="text/javascript" charset="utf-8"></script>
   <script>
     $(function(){
       var currentData = {
         "JP_01": 100,
         "JP_23": 0,
       };
-      $('#map1').vectorMap({
-        map: 'japan_mill_en',
-        backgroundColor: '#B2D0FE',
-        series: {
-          regions: [{
-            values: currentData,
-            scale: ['#D7537F', '#4BC27B'],
-            normalizeFunction: 'polynomial'
-          }]
-        },
-        /* Hover color for each state */
-        onRegionClick: function(event, code) {
-          console.log(code);
-        },
-      });
+      // $('#map1').vectorMap({
+      //   map: 'japan_mill_en',
+      //   backgroundColor: '#B2D0FE',
+      //   series: {
+      //     regions: [{
+      //       values: currentData,
+      //       scale: ['#D7537F', '#4BC27B'],
+      //       normalizeFunction: 'polynomial'
+      //     }]
+      //   },
+      //   /* Hover color for each state */
+      //   onRegionClick: function(event, code) {
+      //     console.log(code);
+      //   },
+      // });
       $('#map2').vectorMap({
         map: 'japan_mill_jp',
         backgroundColor: '#B2D0FE',
@@ -54,7 +54,7 @@
   </style>
 </head>
 <body>
-  <div id="map1" class="map"></div>
+  <!-- <div id="map1" class="map"></div> -->
   <div id="map2" class="map"></div>
 </body>
 </html>

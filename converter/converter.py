@@ -77,6 +77,7 @@ class Converter:
     self.width = args.get('width')
     self.minimal_area = args.get('minimal_area')
     self.longitude0 = float(args.get('longitude0'))
+    self.offset_height = long(args.get('offset_height') or 0)
     self.projection = args.get('projection')
     self.precision = args.get('precision')
     self.buffer_distance = args.get('buffer_distance')
@@ -208,6 +209,8 @@ class Converter:
 
     self.map.width = mapBbox[2] - mapBbox[0]
     self.map.height = mapBbox[3] - mapBbox[1]
+    if self.offset_height:
+      self.map.height -= self.offset_height
     self.map.insets.append({
       "bbox": [{"x": insetBbox[0], "y": -insetBbox[3]}, {"x": insetBbox[2], "y": -insetBbox[1]}],
       "left": 0,
